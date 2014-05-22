@@ -27,8 +27,9 @@ var2 = raw_input("are you sure you want to continue? (y/n)")
 
 if(var2=='y'):
 	print "starting..."
-	fcss = open('photo.css', 'w')
-	fhtml = open('photo.html', 'w')
+	filename = "photo-res "+str(res)+"-radius-"+str(raid)+'-spread-'+str(sprd)
+	fhtml = open(filename+'.html', 'w')
+	fcss = open(filename+'.css', 'w')
 
 	while(counter1 < len(rlist)):
 		while(counter2 < len(rlist[1])):
@@ -45,7 +46,7 @@ if(var2=='y'):
 	fhtml.write('<html lang="en">\n')
 	fhtml.write('    <head>\n')
 
-	fhtml.write('        <link rel="stylesheet" href="./photo.css" />\n')
+	fhtml.write('        <link rel="stylesheet" href="./'+filename+'.css" />\n')
 	fhtml.write('        <title> image to css v0.03 </title>\n')
 	fhtml.write('    </head>\n')
 	fhtml.write('    <body>\n')
